@@ -20,5 +20,10 @@ struct User: Codable {
     let registered: Date
     let tags: [String]
     
-    let friends: [UUID: String]
+    let friends: [Friend]
+}
+
+struct Friend: Codable {
+    let id: UUID
+    let name: String
 }

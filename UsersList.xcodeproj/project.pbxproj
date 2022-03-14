@@ -11,7 +11,7 @@
 		CD05873927DF53D0001946AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05873827DF53D0001946AF /* ContentView.swift */; };
 		CD05873B27DF53D6001946AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD05873A27DF53D6001946AF /* Assets.xcassets */; };
 		CD05873E27DF53D6001946AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD05873D27DF53D6001946AF /* Preview Assets.xcassets */; };
-		CD05874627DF53FF001946AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05874527DF53FF001946AF /* User.swift */; };
+		CD05874627DF53FF001946AF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05874527DF53FF001946AF /* Model.swift */; };
 		CD05874827DF86A5001946AF /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05874727DF86A5001946AF /* UserAPI.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +21,7 @@
 		CD05873827DF53D0001946AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CD05873A27DF53D6001946AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD05873D27DF53D6001946AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CD05874527DF53FF001946AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CD05874527DF53FF001946AF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CD05874727DF86A5001946AF /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,7 @@
 		CD05874427DF53E6001946AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CD05874527DF53FF001946AF /* User.swift */,
+				CD05874527DF53FF001946AF /* Model.swift */,
 				CD05874727DF86A5001946AF /* UserAPI.swift */,
 			);
 			path = Model;
@@ -154,7 +154,7 @@
 				CD05873927DF53D0001946AF /* ContentView.swift in Sources */,
 				CD05874827DF86A5001946AF /* UserAPI.swift in Sources */,
 				CD05873727DF53D0001946AF /* UsersListApp.swift in Sources */,
-				CD05874627DF53FF001946AF /* User.swift in Sources */,
+				CD05874627DF53FF001946AF /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
