@@ -12,6 +12,7 @@
 		CD05873B27DF53D6001946AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD05873A27DF53D6001946AF /* Assets.xcassets */; };
 		CD05873E27DF53D6001946AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD05873D27DF53D6001946AF /* Preview Assets.xcassets */; };
 		CD05874627DF53FF001946AF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05874527DF53FF001946AF /* User.swift */; };
+		CD05874827DF86A5001946AF /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05874727DF86A5001946AF /* UserAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		CD05873A27DF53D6001946AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD05873D27DF53D6001946AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD05874527DF53FF001946AF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CD05874727DF86A5001946AF /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				CD05874527DF53FF001946AF /* User.swift */,
+				CD05874727DF86A5001946AF /* UserAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD05873927DF53D0001946AF /* ContentView.swift in Sources */,
+				CD05874827DF86A5001946AF /* UserAPI.swift in Sources */,
 				CD05873727DF53D0001946AF /* UsersListApp.swift in Sources */,
 				CD05874627DF53FF001946AF /* User.swift in Sources */,
 			);
