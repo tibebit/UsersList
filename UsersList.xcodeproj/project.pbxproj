@@ -13,6 +13,7 @@
 		CD05873E27DF53D6001946AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD05873D27DF53D6001946AF /* Preview Assets.xcassets */; };
 		CD05874627DF53FF001946AF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05874527DF53FF001946AF /* Model.swift */; };
 		CD05874827DF86A5001946AF /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05874727DF86A5001946AF /* UserAPI.swift */; };
+		CD05874A27DFDB9F001946AF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD05874927DFDB9F001946AF /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		CD05873D27DF53D6001946AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD05874527DF53FF001946AF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CD05874727DF86A5001946AF /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		CD05874927DFDB9F001946AF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				CD05873827DF53D0001946AF /* ContentView.swift */,
 				CD05873A27DF53D6001946AF /* Assets.xcassets */,
 				CD05873C27DF53D6001946AF /* Preview Content */,
+				CD05874927DFDB9F001946AF /* DetailView.swift */,
 			);
 			path = UsersList;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				CD05873927DF53D0001946AF /* ContentView.swift in Sources */,
 				CD05874827DF86A5001946AF /* UserAPI.swift in Sources */,
 				CD05873727DF53D0001946AF /* UsersListApp.swift in Sources */,
+				CD05874A27DFDB9F001946AF /* DetailView.swift in Sources */,
 				CD05874627DF53FF001946AF /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

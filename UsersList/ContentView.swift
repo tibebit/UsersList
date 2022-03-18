@@ -25,6 +25,9 @@ struct ContentView: View {
                 .padding(.vertical, 8)
             }
             .navigationTitle("Users List")
+            .background(
+                .linearGradient(Gradient(colors: [.blue, .purple]), startPoint: .topTrailing, endPoint: .bottom)
+            )
         }
         .onAppear {
             let subscription = api.getUsers()
@@ -43,7 +46,7 @@ struct ContentView: View {
     var userCards: some View {
         ForEach(users) { user in
             NavigationLink {
-                Text("\(user.id)")
+                DetailView(user: user)
             } label: {
                 HStack(alignment: .top) {
                     Label(user.name, systemImage: "person.circle.fill")
