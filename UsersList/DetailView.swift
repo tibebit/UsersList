@@ -156,6 +156,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(user: User(id: UUID(), name: "Josh", age: 38, isActive: true, company: "Company", email: "email@mail.it", address: "address", about: "About", registered: Date.now, tags: ["beauty", "fashion", "catering", "hoovering"], friends: [Friend(id: UUID(), name: "Pino"),Friend(id: UUID(), name: "Dear"),Friend(id: UUID(), name: "Friend")]))
+        DetailView(user: User.example)
     }
 }
