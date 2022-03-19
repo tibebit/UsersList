@@ -11,51 +11,37 @@ struct DetailView: View {
     let user: User
     
     var body: some View {
-        VStack {
-            personalData
-            
-            account
-            
-            VStack(alignment: .leading, spacing: 0) {
-                Text("Friends")
-                    .font(.title.bold())
-                    .foregroundColor(.white)
-                    .shadow(radius: 3)
-                RoundedRectangle(cornerRadius: 14)
-                    .frame(maxWidth: .infinity, maxHeight: 4)
+        ScrollView(showsIndicators: false) {
+            VStack {
+                personalData
                 
-                ForEach(user.friends) { friend in
-                    Text(friend.name)
-                }
+                account
+                
+                friends
+                
+                tags
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
-            .background(.ultraThinMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 14))
-            .padding(.horizontal, 16)
-            
-            tags
+//            .overlay(
+//                GeometryReader { proxy in
+//                    let width = proxy.frame(in: .global).size.width
+//                    let maxX = proxy.frame(in: .global).maxX
+//                    Image(systemName: "seal")
+//                        .resizable()
+//                        .frame(width: width/2, height: width/2, alignment: .center)
+//                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+//                        .font(.title)
+//                        .symbolVariant(.fill)
+//                        .offset(x: 4, y: -20)
+//                        .rotation3DEffect(.degrees(30), axis: (1, 0, 1))
+//                        .foregroundStyle(.white.opacity(0.9))
+//                }
+//            )
         }
-        .navigationBarHidden(true)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
         .background(
             .linearGradient(Gradient(colors: [.blue, .purple]), startPoint: .topTrailing, endPoint: .bottom)
         )
-        .overlay(
-            GeometryReader { proxy in
-                let width = proxy.frame(in: .global).size.width
-                let maxX = proxy.frame(in: .global).maxX
-                Image(systemName: "seal")
-                    .resizable()
-                    .frame(width: width/2, height: width/2, alignment: .center)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-                    .font(.title)
-                    .symbolVariant(.fill)
-                    .offset(x: 4, y: -20)
-                    .rotation3DEffect(.degrees(30), axis: (1, 0, 1))
-                    .foregroundStyle(.white.opacity(0.9))
-            }
-        )
+        .navigationTitle("User Info")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     var personalData: some View {
