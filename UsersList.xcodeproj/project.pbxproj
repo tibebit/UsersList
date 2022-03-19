@@ -59,10 +59,10 @@
 			children = (
 				CD05874427DF53E6001946AF /* Model */,
 				CD05873627DF53D0001946AF /* UsersListApp.swift */,
+				CD05874927DFDB9F001946AF /* DetailView.swift */,
 				CD05873827DF53D0001946AF /* ContentView.swift */,
 				CD05873A27DF53D6001946AF /* Assets.xcassets */,
 				CD05873C27DF53D6001946AF /* Preview Content */,
-				CD05874927DFDB9F001946AF /* DetailView.swift */,
 			);
 			path = UsersList;
 			sourceTree = "<group>";

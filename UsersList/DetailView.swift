@@ -102,18 +102,45 @@ struct DetailView: View {
         .padding(.horizontal, 16)
     }
     
+    
+    var friends: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text("Friends")
+                .font(.title.bold())
+                .foregroundColor(.white)
+                .shadow(radius: 3)
+            RoundedRectangle(cornerRadius: 14)
+                .frame(maxWidth: .infinity, maxHeight: 4)
+            
+            ForEach(user.friends) { friend in
+                Text(friend.name)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        .background(.ultraThinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .padding(.horizontal, 16)
+    }
+    
+    
     var tags: some View {
         VStack {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
                     ForEach(user.tags, id: \.self) { tag in
-                        Text(tag)
+                        Text(tag.uppercased())
                             .font(.footnote)
-                            .foregroundStyle(.radialGradient(Gradient(colors: [.black, .white]), center: .center, startRadius: 10, endRadius: 60))
+                            .foregroundColor(.primary)
                             .padding(8)
                             .background(
                                 Capsule(style: .continuous)
                                     .foregroundStyle(.purple.opacity(0.3))
+                                    .overlay(
+                                        Capsule(style: .continuous)
+                                            .strokeBorder(lineWidth: 0.5)
+                                            .foregroundStyle(.secondary)
+                                    )
                             )
                     }
                 }
