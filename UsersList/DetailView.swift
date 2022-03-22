@@ -11,37 +11,24 @@ struct DetailView: View {
     let user: User
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack {
-                personalData
-                
-                account
-                
-                friends
-                
-                tags
+        NavigationView {
+            ScrollView(showsIndicators: false) {
+                VStack {
+                    personalData
+                    
+                    account
+                    
+                    friends
+                    
+                    tags
+                }
             }
-//            .overlay(
-//                GeometryReader { proxy in
-//                    let width = proxy.frame(in: .global).size.width
-//                    let maxX = proxy.frame(in: .global).maxX
-//                    Image(systemName: "seal")
-//                        .resizable()
-//                        .frame(width: width/2, height: width/2, alignment: .center)
-//                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-//                        .font(.title)
-//                        .symbolVariant(.fill)
-//                        .offset(x: 4, y: -20)
-//                        .rotation3DEffect(.degrees(30), axis: (1, 0, 1))
-//                        .foregroundStyle(.white.opacity(0.9))
-//                }
-//            )
+            .background(
+                .linearGradient(Gradient(colors: [.blue, .purple]), startPoint: .topTrailing, endPoint: .bottom)
+            )
+            .navigationTitle("User Info")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .background(
-            .linearGradient(Gradient(colors: [.blue, .purple]), startPoint: .topTrailing, endPoint: .bottom)
-        )
-        .navigationTitle("User Info")
-        .navigationBarTitleDisplayMode(.inline)
     }
     
     var personalData: some View {
