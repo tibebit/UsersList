@@ -32,19 +32,27 @@ struct DetailView: View {
     }
     
     var personalData: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text("Personal Data")
+        VStack(alignment: .leading, spacing: 4) {
+            Text("Personal")
                 .font(.title.bold())
                 .foregroundColor(.white)
                 .shadow(radius: 3)
             RoundedRectangle(cornerRadius: 14)
                 .frame(maxWidth: .infinity, maxHeight: 4)
-            Text(user.name)
-                .font(.title3.bold())
+            HStack {
+                Text(user.name)
+                    .font(.title3.bold())
                 .foregroundColor(.primary)
-            Text("\(user.age) years old")
-                .foregroundColor(.secondary)
+                Spacer()
+                Text("\(user.age) years old")
+                    .foregroundColor(.secondary)
+                    .padding(4)
+                    .background(.thinMaterial)
+                    .clipShape(Capsule())
+            }
+            
             Text(user.address)
+                .padding([.top], 16)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
@@ -54,18 +62,25 @@ struct DetailView: View {
     }
     
     var account: some View {
-        VStack(alignment: .leading, spacing: 0) {
+        VStack(alignment: .leading, spacing: 3) {
             Text("Account")
                 .font(.title.bold())
                 .foregroundColor(.white)
                 .shadow(radius: 3)
             RoundedRectangle(cornerRadius: 14)
                 .frame(maxWidth: .infinity, maxHeight: 4)
-            Text(user.isActive ? "Active" : "Inactive")
-                .font(.title3.bold())
-            Text(user.email)
-            Text(user.registered.formatted(date: .abbreviated, time: .omitted))
-                .foregroundColor(.secondary)
+            HStack {
+                Text(user.isActive ? "Active" : "Inactive")
+                    .font(.title3.bold())
+                    .padding(8)
+                    .background(.thinMaterial)
+                .clipShape(Capsule())
+                VStack {
+                    Text(user.email)
+                    Text(user.registered.formatted(date: .abbreviated, time: .omitted))
+                }
+            }
+                
             Text(user.about)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -98,7 +113,15 @@ struct DetailView: View {
     
     
     var tags: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 8) {
+            
+            Text("Tags")
+                .font(.title.bold())
+                .foregroundColor(.white)
+                .shadow(radius: 3)
+            RoundedRectangle(cornerRadius: 14)
+                .frame(maxWidth: .infinity, maxHeight: 4)
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
                     ForEach(user.tags, id: \.self) { tag in
@@ -118,12 +141,12 @@ struct DetailView: View {
                     }
                 }
             }
-            .frame(maxWidth: .infinity)
-            .padding()
-            .background(.ultraThinMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 14))
-            .padding(.horizontal, 16)
         }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(.ultraThinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .padding(.horizontal, 16)
     }
 }
 
