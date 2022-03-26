@@ -19,6 +19,7 @@
 		CD68B6C327EE37C10024AEED /* CachedFriend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68B6BF27EE37C10024AEED /* CachedFriend+CoreDataProperties.swift */; };
 		CD68B6C427EE37C10024AEED /* CachedUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68B6C027EE37C10024AEED /* CachedUser+CoreDataClass.swift */; };
 		CD68B6C527EE37C10024AEED /* CachedUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68B6C127EE37C10024AEED /* CachedUser+CoreDataProperties.swift */; };
+		CD68B6C727EE3FC00024AEED /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD68B6C627EE3FC00024AEED /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		CD68B6BF27EE37C10024AEED /* CachedFriend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CD68B6C027EE37C10024AEED /* CachedUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CD68B6C127EE37C10024AEED /* CachedUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CD68B6C627EE3FC00024AEED /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		CD68B6BA27EE33090024AEED /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				CD68B6C627EE3FC00024AEED /* DataController.swift */,
 				CD68B6BB27EE331E0024AEED /* Entities */,
 				CD68B6B727EE32770024AEED /* UsersList.xcdatamodeld */,
 			);
@@ -190,6 +193,7 @@
 				CD68B6C527EE37C10024AEED /* CachedUser+CoreDataProperties.swift in Sources */,
 				CD05874827DF86A5001946AF /* UserAPI.swift in Sources */,
 				CD68B6C327EE37C10024AEED /* CachedFriend+CoreDataProperties.swift in Sources */,
+				CD68B6C727EE3FC00024AEED /* DataController.swift in Sources */,
 				CD68B6C427EE37C10024AEED /* CachedUser+CoreDataClass.swift in Sources */,
 				CD05873727DF53D0001946AF /* UsersListApp.swift in Sources */,
 				CD05874A27DFDB9F001946AF /* DetailView.swift in Sources */,
