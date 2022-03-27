@@ -7,11 +7,15 @@
 
 import SwiftUI
 import Combine
+import CoreData
 
 struct ContentView: View {
     @State private var users = [User]()
     var api                  = UserAPI()
     @State private var isShowingError = false
+    @FetchRequest(sortDescriptors: []) var cachedUsers: FetchedResults<CachedUser>
+    @Environment(\.managedObjectContext) var moc
+    
     
     var body: some View {
         NavigationView {
